@@ -3,8 +3,6 @@ os:
 - Visual Studio 2017
 
 build_script:
-  - mkdir build
-  - cd build
-  - cmake ..
-  - cmake --build .
-  - C:\projects\optional\build\Debug\tests.exe
+  - cmake -Bbuild -S.
+  - cmake --build build
+  - cmake --build build --target RUN_TESTS
